@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useUserStore } from '@/store/user';
 
 defineProps<{ msg: string }>();
 
 const count = ref(0);
+
+const user = useUserStore();
 </script>
 
 <template>
@@ -33,6 +36,8 @@ const count = ref(0);
         Edit
         <code>components/HelloWorld.vue</code> to test hot module replacement.
     </p>
+
+    <div>{{ user.name }}</div>
 </template>
 
 <style scoped>
