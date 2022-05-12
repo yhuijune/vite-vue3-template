@@ -24,8 +24,10 @@
     "src/**/*.{ts,js,vue}": []
   },
   "dependencies": {
+    "@vueuse/core": "^8.4.2",
     "pinia": "^2.0.14",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
