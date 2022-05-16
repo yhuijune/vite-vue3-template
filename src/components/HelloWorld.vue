@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useUserStore } from '@/store/user';
+import { Focus as vFocus } from '@/directive';
 
 defineProps<{ msg: string }>();
 
@@ -38,6 +39,9 @@ const user = useUserStore();
     </p>
 
     <div>{{ user.name }}</div>
+    <div>
+        <input v-focus />
+    </div>
 </template>
 
 <style scoped>
