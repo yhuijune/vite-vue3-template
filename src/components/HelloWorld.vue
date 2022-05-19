@@ -45,11 +45,17 @@ onMounted(() => {
         Edit
         <code>components/HelloWorld.vue</code> to test hot module replacement.
     </p>
-
     <div>
         <div>{{ user.name }}</div>
         <div v-if="false"><input v-focus /></div>
         <div><input ref="reference" /></div>
+    </div>
+    <div>
+        <el-button type="primary">primary</el-button>
+        <el-button type="success">success</el-button>
+        <el-button type="warning">warning</el-button>
+        <el-button type="danger">danger</el-button>
+        <el-button type="info">info</el-button>
     </div>
 </template>
 
