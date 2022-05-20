@@ -23,6 +23,7 @@
   "lint-staged": {
     "src/**/*.{ts,js,vue}": [
       "npm run eslint",
+      "npm run prettier",
       "npm run stylelnt"
     ]
   },
