@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import { useUserStore } from '@/store/user';
 import { Focus as vFocus } from '@/directive';
 import { useFocus } from '@/hooks';
+import { useDark, useToggle } from '@vueuse/core';
 
 defineProps<{ msg: string }>();
 
@@ -12,6 +13,9 @@ const user = useUserStore();
 
 const reference = ref(null);
 const { focus } = useFocus(reference);
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 
 onMounted(() => {
     focus();
@@ -57,6 +61,7 @@ onMounted(() => {
         <el-button type="danger">danger</el-button>
         <el-button type="info">info</el-button>
     </div>
+    <button @click="toggleDark()">Is Dark: {{ isDark }}</button>
 </template>
 
 <style scoped>

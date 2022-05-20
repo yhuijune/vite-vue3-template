@@ -3,8 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-import ElementPlus from 'element-plus';
 import '@/styles/element/index.scss';
+import '@/styles/element/theme/dark.scss';
+import ElementPlus from 'element-plus';
 
 const app = createApp(App);
 app.use(router);
