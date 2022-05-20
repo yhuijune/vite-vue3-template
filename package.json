@@ -21,7 +21,10 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,js,vue}": []
+    "src/**/*.{ts,js,vue}": [
+      "npm run eslint",
+      "npm run stylelnt"
+    ]
   },
   "dependencies": {
     "@vueuse/core": "^8.4.2",
